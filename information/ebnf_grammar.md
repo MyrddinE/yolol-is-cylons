@@ -22,7 +22,7 @@ assign_statement = identifier, assign_op, expression;
 (* Expressions evaluate to a value *)
 expression      = expr_and;
 
-expr_and        = expr_or,          | expr_and,         infix_op_and,       exor_or;
+expr_and        = expr_or,          | expr_and,         infix_op_and,       expr_or;
 expr_or         = expr_equality,    | expr_or,          infix_op_or,        expr_equality;
 expr_equality   = expr_order,       | expr_equality,    infix_op_equality,  expr_order;
 expr_order      = expr_additive,    | expr_order,       infix_op_order,     expr_additive;
